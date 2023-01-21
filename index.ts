@@ -1,7 +1,21 @@
-let isBirthday:boolean = true;
-let age:number = 20;
-let userName:string = 'Max';
+let isBirthdayData:boolean = true;
+let ageData:number = 20;
+let userNameData:string = 'Max';
 
-if (isBirthday) {
-    console.log(`Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`)
+// function logBrtMsg(isBirthday:boolean, age:number, userName:string):string {    
+//     if (isBirthday) {
+//         return `Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`;
+//     } else {
+//         return 'Error';
+//     }
+// }
+
+const logBrtMsg = (isBirthday:boolean, age:number, userName:string):string => {    
+    if (isBirthday) {
+        return `Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`;
+    } else {
+        return 'Error';
+    }
 }
+
+logBrtMsg(isBirthdayData, ageData, userNameData)
