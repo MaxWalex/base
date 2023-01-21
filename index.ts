@@ -1,3 +1,7 @@
-const str = 'str';
+let isBirthday:boolean = true;
+let age:number = 20;
+let userName:string = 'Max';
 
-console.log(str)
+if (isBirthday) {
+    console.log(`Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`)
+}
