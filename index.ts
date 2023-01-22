@@ -29,3 +29,17 @@ const logBrtMsg = ({isBirthday, age, userName, messages:{error}}:{
 }
 
 console.log(logBrtMsg(userData))
+
+const departments:string[] = ['dev', 'design', 'marketing']
+
+const department = departments[0]
+
+// departments.push(5);
+const report = departments	
+						.filter((d:string) => d !== 'dev')
+						.map((d:string) => `${d} - done`)
+
+const nums:number[][] = [[1, 2, 3], [1, 2, 3]]
+
+const [first, second] = report;
+console.log(first, second)
