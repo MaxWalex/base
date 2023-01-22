@@ -1,21 +1,16 @@
-let isBirthdayData:boolean = true;
-let ageData:number = 20;
-let userNameData:string = 'Max';
+// const test:null = null;
 
-const createError = (msg:string) => {
-	throw new Error(msg);
+const test:number = null;
+const test2:string = null;
+const test4:undefined = undefined;
+const test5:any = undefined;
+
+function getRandomData() {
+	if (Math.random() < 0.5) {
+		return null;
+	} else {
+		return '   Some    ';
+	}
 }
-
-const logBrtMsg = (isBirthday:boolean, age:number, userName:string):string => {    
-    if (isBirthday === true) {
-        return `Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`;
-    } else if (isBirthday === false) {
-        return 'Too bad';
-    }
-	
-	return createError('Error');
-}
-
-logBrtMsg(isBirthdayData, ageData, userNameData)
-
-// const smth:never = null
+const data = getRandomData()
+const trimmedData = data ? data.trim() : null;
