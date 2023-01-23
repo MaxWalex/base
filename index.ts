@@ -1,52 +1,36 @@
-const userData = {
-	isBirthday: true,
-	age: 20,
-	userName: 'Max',
-	messages: {
-		error: 'Error',
+const message:string | number = 3;
+const messages:string[] | number[] = ['a', 'b']
+
+function printMsg(msg:string[] | number | boolean):void {
+	if (Array.isArray(msg)) {
+		msg.forEach((item:string) => console.log(item))
+	} else if (typeof msg === 'number') {
+		console.log(msg.toFixed())
+	} else {
+		console.log(msg)
+	}
+
+	console.log(msg)
+}
+
+printMsg(4)
+
+const printReadings = (a:number[] | string) => {
+	console.log(a.toString())
+}
+
+const checkReadings = (readings:{system:number} | {user:number}):void => {
+	if ('system' in readings) {
+		console.log(readings.system)
+	} else {
+		console.log(readings.user)
 	}
 }
 
-const userDataTuple:[boolean, number, ...string[]] = [true, 40, "John", 'Max', 'Alex']
-// userDataTuple[3]
-// userDataTuple.push(50)
-// userDataTuple[3]
-
-const res = userDataTuple.map((t) => `${t} - data`)
-
-const [bthd, age, userName] = userDataTuple;
-
-console.log(res)
-
-// const createError = (msg:string) => {
-// 	throw new Error(msg);
-// }
-
-// const logBrtMsg = ({isBirthday, age, userName, messages:{error}}:{
-// 	isBirthday:boolean,
-// 	age:number,
-// 	userName:string,
-// 	messages:{error:string}
-// }):string => {    
-//     if (isBirthday) {
-//         return `Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`;
-//     } else {
-//         return createError(error);
-//     }
-// }
-
-// console.log(logBrtMsg(userData))
-
-// const departments:string[] = ['dev', 'design', 'marketing']
-
-// const department = departments[0]
-
-// // departments.push(5);
-// const report = departments	
-// 						.filter((d:string) => d !== 'dev')
-// 						.map((d:string) => `${d} - done`)
-
-// const nums:number[][] = [[1, 2, 3], [1, 2, 3]]
-
-// const [first, second] = report;
-// console.log(first, second)
+function logValue(x:string | Date) {
+	if (x instanceof Date) {
+		console.log(x.getDate())
+	} else {
+		console.log(x.trim())
+	}
+}  
